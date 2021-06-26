@@ -42,12 +42,12 @@ Notice :
  - The appointments startTime and endTime will be set to 48 and 49 hours from the time when the request is received
 
 ### You want to integrate your project now?
-This projects uses the [Portable EHR Java Feed SDK](https://link-to-come.com). Add the maven dependency in your project to have a jump start
+This projects uses the [Portable EHR Java Feed SDK](https://github.com/Portable-EHR/PortableEHR-Feed-SDK). Add the maven dependency in your project to have a jump start
 ```xml
 <dependency>
     <groupId>org.portableehr</groupId>
-    <artifactId>java-sdk</artifactId>
-    <version>1.0</version>
+    <artifactId>portableehr-feed-sdk</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 
