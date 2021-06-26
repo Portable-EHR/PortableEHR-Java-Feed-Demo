@@ -1,0 +1,28 @@
+{
+  "requestStatus": {
+    "status": "OK",
+    "message": "Returning Practitioner [1ef9bda5-e67f-11ea-a057-fdaac99f1422] from Dispensary [fiktivDP]."
+  },
+  "responseContent": {
+    "feedAlias": "fiktivDP",
+    "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1422",
+    "lastUpdated": "2021-01-14T23:41:21.050Z",
+    "feedItemVersion": 1,
+    "id": "1ef9bda5-e67f-11ea-a057-fdaac99f1422",
+    "firstName": "Michaela",
+    "lastName": "Quinn",
+    "middleName": "Anne",
+    "practices": [
+      {
+        "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1422",
+        "issuerKind": "practiceLicense",
+        "issuerAlias": "CA_QC_CMQ",
+        "issuer": "CMQ",
+        "number": "112477",
+        "version": "2",
+        "expiresOn": "2021-01-28",
+        "isActive": true
+      }
+    ]
+  }
+}

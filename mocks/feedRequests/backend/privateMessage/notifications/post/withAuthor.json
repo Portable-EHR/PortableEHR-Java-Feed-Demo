@@ -1,0 +1,10 @@
+{
+  "feedAlias": "fiktivDP",
+  "command": "pushSingle",
+  "parameters": {
+    "messageId": "1ef9bda0-e67f-11ea-a057-fdaac99f1111",
+    "patientId": "1ef9bda5-e67f-11ea-a057-fdaac99f1411",
+    "dateCreated": "2021-03-03T14:51:43.622Z",
+    "author": "Dr Evil"
+  }
+}

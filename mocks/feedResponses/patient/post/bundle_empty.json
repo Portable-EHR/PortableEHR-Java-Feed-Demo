@@ -1,0 +1,11 @@
+{
+  "requestStatus": {
+    "status": "OK",
+    "message": "Returning a Bundle of [0] Patient from [fiktivDP]"
+  },
+  "responseContent": {
+    "offset": 0,
+    "hasMore": false,
+    "results": []
+  }
+}

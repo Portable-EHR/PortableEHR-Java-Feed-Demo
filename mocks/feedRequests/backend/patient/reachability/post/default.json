@@ -1,0 +1,7 @@
+{
+  "feedAlias": "fiktivDP",
+  "command": "pullSingle",
+  "parameters": {
+    "patientId": "1ef9bda5-e67f-11ea-a057-fdaac99f1411"
+  }
+}

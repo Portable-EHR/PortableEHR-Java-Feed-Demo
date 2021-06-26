@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "2a50d3d4-3e9d-40ed-9ca5-bea02a60f20d",
+		"name": "Feed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"vscreamed\",\n    \"password\" : \"qYDTPqPsCF5qhv3lku3s9d\"\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/login",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/patient (pullSingle)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pullSingle\",\n  \"parameters\": {\n    \"feedItemId\": \"1ef9bda5-e67f-11ea-a057-fdaac99f1414\"\n  }\n}\n\n"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/patient",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/patient (pullBundle)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pullBundle\",\n  \"parameters\": {\n    \"since\": \"2020-11-13T22:46:55.313Z\",\n    \"offset\" : 1,\n    \"maxItems\" : 20\n  }\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/patient",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/patient/pehrReachability Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pushSingle\",\n  \"parameters\": {\n    \"patientId\": \"1ef9bda1-e67f-11ea-a057-fdaac99f1414\",\n    \"isReachable\": true\n  }\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/patient/pehrReachability",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"patient",
+						"pehrReachability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/practitioner (pullSingle)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pullSingle\",\n  \"parameters\": {\n    \"feedItemId\": \"1ef9bda5-e67f-11ea-a057-fdaac99f1414\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/practitioner",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"practitioner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/practitioner (pullBundle)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pullBundle\",\n  \"parameters\": {\n    \"since\": \"2020-11-13T22:46:55.313Z\",\n    \"offset\" : 1,\n    \"maxItems\" : 20\n  }\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/practitioner",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"practitioner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/privateMessage/content",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pullSingle\",\n  \"parameters\": {\n    \"feedItemId\": \"1ef9bda5-e67f-11ea-a057-fdaac99f1414\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/privateMessage/content",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"privateMessage",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/privateMessage/status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pushSingle\",\n  \"parameters\": {\n    \"messageId\": \"1ef9bda0-e67f-11ea-a057-fdaac99f1414\",\n    \"status\": \"received\",\n    \"statusDate\": \"2021-01-14T23:41:21.050Z\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/privateMessage/status",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"privateMessage",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/appointment (pullSingle)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pullSingle\",\n  \"parameters\": {\n    \"feedItemId\": \"1ef9bda5-e67f-11ea-a057-fdaac99f1414\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/appointment",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/appointment (pullBundle)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pullBundle\",\n  \"parameters\": {\n    \"since\": \"2020-11-13T22:46:55.313Z\",\n    \"offset\" : 1,\n    \"maxItems\" : 20\n  }\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/appointment",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/feed/appointment/disposition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"feedAlias\": \"fiktivDP\",\n  \"command\": \"pushSingle\",\n  \"parameters\": {\n    \"id\": \"1ef9bdaa-e67f-11ea-a057-fdaac99f1414\",\n    \"status\": \"patientConfirmed\",\n    \"lastUpdated\": \"2021-01-14T23:41:21.050Z\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{feedHubUrl}}/feed/appointment/disposition",
+					"host": [
+						"{{feedHubUrl}}"
+					],
+					"path": [
+						"feed",
+						"appointment",
+						"disposition"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

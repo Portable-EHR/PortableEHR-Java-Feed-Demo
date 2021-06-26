@@ -1,0 +1,291 @@
+{
+  "requestStatus": {
+    "status": "OK",
+    "message": "Returning a Bundle of [3] Patient from [fiktivDP]"
+  },
+  "responseContent": {
+    "offset": 0,
+    "hasMore": false,
+    "results": [
+      {
+        "feedAlias": "fiktivDP",
+        "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1411",
+        "lastUpdated": "2021-01-14T23:41:21.050Z",
+        "feedItemVersion": 1,
+        "chartNumber": "H009",
+        "primaryFeedPractitionerId": "1ef9bda5-e67f-11ea-a057-fdaac99f1421",
+        "demographics": {
+          "dateOfBirth": "1955-04-15",
+          "gender": "M",
+          "genderAtBirth": "M",
+          "name": {
+            "familyName": "Doe",
+            "firstName": "John",
+            "middleName": ""
+          },
+          "nameAtBirth": {
+            "familyName": "Doe",
+            "firstName": "John",
+            "middleName": ""
+          },
+          "placeOfBirth": {
+            "street1": "1000 Park Avenue, #200",
+            "street2": "In the cupboard, under the staircase.",
+            "city": "Montreal",
+            "state": "QC",
+            "zip": "H0H 0H0",
+            "country": "CA"
+          },
+          "motherNameAtBirth": {
+            "familyName": "Sims",
+            "firstName": "Margaret",
+            "middleName": "Anne"
+          },
+          "motherDateOfBirth": "1930-09-26",
+          "motherPlaceOfBirth": {
+            "street1": "1000 Park Avenue, #200",
+            "street2": "In the cupboard, under the staircase.",
+            "city": "Montreal",
+            "state": "QC",
+            "zip": "H0H 0H0",
+            "country": "CA"
+          },
+          "dateOfDeath": "1955-04-15"
+        },
+        "identifiedBy": [
+          {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1411",
+            "issuerKind": "healthCare",
+            "issuerAlias": "CA_QC_RAMQ",
+            "number": "DOEJ55041504",
+            "version": "2",
+            "expiresOn": "2021-01-28"
+          }
+        ],
+        "locatedWith": {
+          "contact": {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1411",
+            "lastName": "Doe",
+            "firstName": "John",
+            "middleName": "",
+            "preferredGender": "M",
+            "preferredLanguage": "en",
+            "email": "jdoe@mailinator.com",
+            "alternateEmail": "jdoe@mailinator.com",
+            "mobilePhone": "15551113333",
+            "professionalSalutation": "Dr",
+            "salutation": "Mr",
+            "titles": "Md, PhD"
+          },
+          "address": {
+            "street1": "1000 Park Avenue, #200",
+            "street2": "In the cupboard, under the staircase.",
+            "city": "Montreal",
+            "state": "QC",
+            "zip": "H0H 0H0",
+            "country": "CA"
+          },
+          "emergencyContact": {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1411",
+            "lastName": "Doe",
+            "firstName": "John",
+            "preferredGender": "M",
+            "preferredLanguage": "en",
+            "email": "jdoe@mailinator.com",
+            "alternateEmail": "jdoe@mailinator.com",
+            "mobilePhone": "15551113333",
+            "professionalSalutation": "Dr",
+            "salutation": "Mr",
+            "titles": "Md, PhD"
+          }
+        }
+      },
+      {
+        "feedAlias": "fiktivDP",
+        "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1414",
+        "lastUpdated": "2021-01-14T23:41:21.050Z",
+        "feedItemVersion": 1,
+        "chartNumber": "H008",
+        "primaryFeedPractitionerId": "1ef9bda5-e67f-11ea-a057-fdaac99f1420",
+        "demographics": {
+          "dateOfBirth": "1955-04-15",
+          "gender": "M",
+          "genderAtBirth": "M",
+          "name": {
+            "familyName": "Clark",
+            "firstName": "Adam",
+            "middleName": "Edward"
+          },
+          "nameAtBirth": {
+            "familyName": "Clark",
+            "firstName": "Adam",
+            "middleName": "Edward"
+          },
+          "placeOfBirth": {
+            "street1": "1000 Park Avenue, #200",
+            "street2": "In the cupboard, under the staircase.",
+            "city": "Montreal",
+            "state": "QC",
+            "zip": "H0H 0H0",
+            "country": "CA"
+          },
+          "motherNameAtBirth": {
+            "familyName": "Taylor",
+            "firstName": "Jane",
+            "middleName": "Rose"
+          },
+          "motherDateOfBirth": "1930-09-26",
+          "motherPlaceOfBirth": {
+            "street1": "1000 Park Avenue, #200",
+            "street2": "In the cupboard, under the staircase.",
+            "city": "Montreal",
+            "state": "QC",
+            "zip": "H0H 0H0",
+            "country": "CA"
+          },
+          "dateOfDeath": "1955-04-15"
+        },
+        "identifiedBy": [
+          {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1414",
+            "issuerKind": "healthCare",
+            "issuerAlias": "CA_QC_RAMQ",
+            "number": "ADAC55041507",
+            "version": "2",
+            "expiresOn": "2021-01-28"
+          }
+        ],
+        "locatedWith": {
+          "contact": {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1414",
+            "lastName": "Clark",
+            "firstName": "Adam",
+            "middleName": "Edward",
+            "preferredGender": "M",
+            "preferredLanguage": "EN",
+            "email": "adam.edward.clark@mailinator.com",
+            "alternateEmail": "adam.edward.clark@mailinator.com",
+            "mobilePhone": "15552224444",
+            "professionalSalutation": "Dr",
+            "salutation": "Mr",
+            "titles": "Md, PhD"
+          },
+          "address": {
+            "street1": "1000 Park Avenue, #200",
+            "street2": "In the cupboard, under the staircase.",
+            "city": "Montreal",
+            "state": "QC",
+            "zip": "H0H 0H0",
+            "country": "CA"
+          },
+          "emergencyContact": {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1414",
+            "lastName": "Clark",
+            "firstName": "Adam",
+            "middleName": "Edward",
+            "preferredGender": "M",
+            "preferredLanguage": "EN",
+            "email": "adam.edward.clark@mailinator.com",
+            "alternateEmail": "adam.edward.clark@mailinator.com",
+            "mobilePhone": "15552224444",
+            "professionalSalutation": "Dr",
+            "salutation": "Mr",
+            "titles": "Md, PhD"
+          }
+        }
+      },
+      {
+        "feedAlias": "fiktivDP",
+        "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1410",
+        "lastUpdated": "2021-01-14T23:41:21.050Z",
+        "feedItemVersion": 1,
+        "chartNumber": "H008",
+        "primaryFeedPractitionerId": "1ef9bda5-e67f-11ea-a057-fdaac99f1422",
+        "demographics": {
+          "dateOfBirth": "1955-04-15",
+          "gender": "F",
+          "genderAtBirth": "F",
+          "name": {
+            "familyName": "Doe",
+            "firstName": "Jane",
+            "middleName": ""
+          },
+          "nameAtBirth": {
+            "familyName": "Doe",
+            "firstName": "Jane",
+            "middleName": ""
+          },
+          "placeOfBirth": {
+            "street1": "1000 Park Avenue, #200",
+            "street2": "In the cupboard, under the staircase.",
+            "city": "Montreal",
+            "state": "QC",
+            "zip": "H0H 0H0",
+            "country": "CA"
+          },
+          "motherNameAtBirth": {
+            "familyName": "Taylor",
+            "firstName": "Jane",
+            "middleName": "Rose"
+          },
+          "motherDateOfBirth": "1930-09-26",
+          "motherPlaceOfBirth": {
+            "street1": "1000 Park Avenue, #200",
+            "street2": "In the cupboard, under the staircase.",
+            "city": "Montreal",
+            "state": "QC",
+            "zip": "H0H 0H0",
+            "country": "CA"
+          },
+          "dateOfDeath": "1955-04-15"
+        },
+        "identifiedBy": [
+          {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1410",
+            "issuerKind": "healthCare",
+            "issuerAlias": "CA_QC_RAMQ",
+            "number": "DOEJ55041544",
+            "version": "2",
+            "expiresOn": "2021-01-28"
+          }
+        ],
+        "locatedWith": {
+          "contact": {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1410",
+            "lastName": "Joe",
+            "firstName": "Jane",
+            "preferredGender": "F",
+            "preferredLanguage": "EN",
+            "email": "jane.doe@mailinator.com",
+            "alternateEmail": "jane.doe@mailinator.com",
+            "mobilePhone": "15552221111",
+            "professionalSalutation": "Dr",
+            "salutation": "Mr",
+            "titles": "Md, PhD"
+          },
+          "address": {
+            "street1": "1000 Park Avenue, #200",
+            "street2": "In the cupboard, under the staircase.",
+            "city": "Montreal",
+            "state": "QC",
+            "zip": "H0H 0H0",
+            "country": "CA"
+          },
+          "emergencyContact": {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1410",
+            "lastName": "Doe",
+            "firstName": "Jane",
+            "preferredGender": "F",
+            "preferredLanguage": "EN",
+            "email": "jane.doe@mailinator.com",
+            "alternateEmail": "jane.doe@mailinator.com",
+            "mobilePhone": "15552221111",
+            "professionalSalutation": "Dr",
+            "salutation": "Mr",
+            "titles": "Md, PhD"
+          }
+        }
+      }
+    ]
+  }
+}

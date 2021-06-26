@@ -1,0 +1,11 @@
+{
+  "requestStatus": {
+    "status": "OK",
+    "message": "Returning a Bundle of [3] Practitioners from Dispensary [fiktivDP]."
+  },
+  "responseContent": {
+    "offset": 0,
+    "hasMore": false,
+    "results": []
+  }
+}

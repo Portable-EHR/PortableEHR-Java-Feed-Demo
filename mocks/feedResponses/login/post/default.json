@@ -1,0 +1,9 @@
+{
+  "requestStatus": {
+    "status": "OK",
+    "message": "Created token for [DrGueritout], 30 years validity."
+  },
+  "responseContent": {
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6Ikc0QVh2R3BacEVSR2VVM2w1TUlMYjBlQ3J6UDF3RGVhVEVYSnFrb0wifQ.eyJpc3MiOiJodHRwczovL2ZlZWQucG9ydGFibGVlaHIubmV0Iiwic3ViIjoiZGVtb0JlYXJlciIsImp0aSI6IjZhZGNhZDA2LTZkMjAtNGM5YS1iMzg1LTc1ODZiMTI1ZTc0OSIsImlhdCI6MTYyMTM2NTczOCwiZXhwIjozMTk4MTY1NzM4fQ.W1YkWp-tpwLUKSTECH3C9zPdNmHsO5qFUtEgLsPL-tc"
+  }
+}

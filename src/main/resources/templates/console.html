@@ -1,0 +1,257 @@
+<!--
+  ~ Copyright © Portable EHR inc, 2021
+  ~ https://portableehr.com/
+  -->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Portable EHR Java Feed</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row bg-primary text-xl-center"> <!-- Title -->
+            <h1>Portable EHR Java Feed</h1>
+        </div>
+        <div class="row">
+            <div class="col border bg-secondary"> <!-- Left -->
+                <h3>Responses to FeedHub requests (we implement the Feed API)</h3>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/login">
+                    <div class="col-sm-6">
+                        <label>POST /login</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverLoginOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverLoginSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/patientSingle">
+                    <div class="col">
+                        <label>POST /feed/patient (pullSingle)</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverPatientOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverPatientSingleSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/patientBundle">
+                    <div class="col">
+                        <label>POST /feed/patient (pullBundle)</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverPatientOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverPatientBundleSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/patient/pehrReachability">
+                    <div class="col">
+                        <label>POST /feed/patient/pehrReachability</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverPatientPehrReachabilityOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverPatientPehrReachabilitySelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/practitionerSingle">
+                    <div class="col">
+                        <label>POST /feed/practitioner (pullSingle)</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverPractitionerOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverPractitionerSingleSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/practitionerBundle">
+                    <div class="col">
+                        <label>POST /feed/practitioner (pullBundle)</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverPractitionerOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverPractitionerBundleSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/privateMessage/content">
+                    <div class="col">
+                        <label>POST /feed/privateMessage/content</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverPrivateMessageContentOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverPrivateMessageContentSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/privateMessage/status">
+                    <div class="col">
+                        <label>POST /feed/privateMessage/status</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverPrivateMessageStatusOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverPrivateMessageStatusSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/appointmentSingle">
+                    <div class="col">
+                        <label>POST /feed/appointment (pullSingle)</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverAppointmentOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverAppointmentSingleSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/appointmentBundle">
+                    <div class="col">
+                        <label>POST /feed/appointment (pullBundle)</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverAppointmentOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverAppointmentBundleSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedApiOption" data-endpoint="/server/feed/appointment/disposition">
+                    <div class="col">
+                        <label>POST /feed/appointment/disposition</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="option">
+                            <option th:each="option : ${state.serverAppointmentDispositionsOptions}" th:value="${option}" th:text="${option}" th:selected="${option==state.serverAppointmentDispositionSelected}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 status"></div>
+                </div>
+
+                <div class="row overflow-auto" style="height: 12em;">
+                    <div class="card text-white bg-secondary">
+                        <div class="card-header">Servers calls logs</div>
+                        <div class="card-body">
+                            <table class="table table-striped table-dark serverLog">
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col border bg-secondary"> <!-- Not Left -->
+                <h3>Request to FeedHub (we consume FeedHub API)</h3>
+
+                <div class="row border-bottom mt-3 pb-3 feedHubApiCall" data-endpoint="/client/login">
+                    <div class="col-sm-5">
+                        <label>POST /login</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="option">
+                            <option th:each="option : ${state.clientLoginOptions}" th:value="${option}" th:text="${option}" th:selected="${option=='default.json'}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-outline-light button">Send</button>
+                    </div>
+                    <div class="col-sm-1 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedHubApiCall" data-endpoint="/client/backend/patient/reachability">
+                    <div class="col-sm-5">
+                        <label>POST /backend/patient/reachability</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="option">
+                            <option th:each="option : ${state.clientPatientReachabilityOptions}" th:value="${option}" th:text="${option}" th:selected="${option=='default.json'}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-outline-light button">Send</button>
+                    </div>
+                    <div class="col-sm-1 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedHubApiCall" data-endpoint="/client/backend/privateMessage/notification">
+                    <div class="col-sm-5">
+                        <label>POST /backend/privateMessage/notification</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="option">
+                            <option th:each="option : ${state.clientPrivateMessageNotificationOptions}" th:value="${option}" th:text="${option}" th:selected="${option=='default.json'}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-outline-light button">Send</button>
+                    </div>
+                    <div class="col-sm-1 status"></div>
+                </div>
+
+                <div class="row border-bottom mt-3 pb-3 feedHubApiCall" data-endpoint="/client/backend/idissuers">
+                    <div class="col-sm-5">
+                        <label>POST /backend/idissuers</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="option">
+                            <option th:each="option : ${state.clientIdIssuersOptions}" th:value="${option}" th:text="${option}" th:selected="${option=='default.json'}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-outline-light button">Send</button>
+                    </div>
+                    <div class="col-sm-1 status"></div>
+                </div>
+
+                <div class="row overflow-auto" style="width: 50em;">
+                    <div class="card text-white bg-secondary">
+                        <div class="card-header">Client calls responses</div>
+                        <div class="card-body">
+<pre><code id="responseViewer"></code></pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            Copyright © 2019 DSE Portable. Tous les droits sont réservés
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/console.js"></script>
+</body>
+</html>

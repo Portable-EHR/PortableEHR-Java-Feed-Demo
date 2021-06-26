@@ -1,0 +1,46 @@
+{
+  "requestStatus": {
+    "status": "OK",
+    "message": "Returning Appointment [1ef9bdaa-e67f-11ea-a057-fdaac99f1414] from Dispensary [fiktivDP]."
+  },
+  "responseContent": {
+    "offset" : 0,
+    "hasMore" : false,
+    "results": [
+      {
+        "feedAlias": "fiktivDP",
+        "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1431",
+        "lastUpdated": "2021-01-14T23:41:21.050Z",
+        "feedItemVersion": 1,
+        "id": "1ef9bda5-e67f-11ea-a057-fdaac99f1431",
+        "patientId": "1ef9bda5-e67f-11ea-a057-fdaac99f1411",
+        "practitionerId": "1ef9bda5-e67f-11ea-a057-fdaac99f1420",
+        "location": "clinic",
+        "with": "Zoidberg, John, A.",
+        "startTime": "2022-01-15T15:15:00.000Z",
+        "endTime": "2022-01-15T15:25:00.000Z",
+        "description": "Covid-19 vaccine appointment",
+        "notes": "Must be alive. #app",
+        "patientMustConfirm": true,
+        "confirmationStatus": "pending"
+      },
+      {
+        "feedAlias": "fiktivDP",
+        "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1432",
+        "lastUpdated": "2021-01-14T23:41:21.050Z",
+        "feedItemVersion": 1,
+        "id": "1ef9bda5-e67f-11ea-a057-fdaac99f1432",
+        "patientId": "1ef9bda5-e67f-11ea-a057-fdaac99f1411",
+        "practitionerId": "1ef9bda5-e67f-11ea-a057-fdaac99f1421",
+        "location": "clinic",
+        "with": "Evil, Douglas",
+        "startTime": "2021-12-15T15:15:00.000Z",
+        "endTime": "2021-12-15T15:25:00.000Z",
+        "description": "Covid-19 vaccine appointment",
+        "notes": "Must be alive. #app",
+        "patientMustConfirm": true,
+        "confirmationStatus": "pending"
+      }
+    ]
+  }
+}

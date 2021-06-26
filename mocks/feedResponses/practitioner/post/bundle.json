@@ -1,0 +1,78 @@
+{
+  "requestStatus": {
+    "status": "OK",
+    "message": "Returning a Bundle of [3] Practitioners from Dispensary [fiktivDP]."
+  },
+  "responseContent": {
+    "offset": 0,
+    "hasMore": false,
+    "results": [
+      {
+        "feedAlias": "fiktivDP",
+        "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1420",
+        "lastUpdated": "2021-01-14T23:41:21.050Z",
+        "feedItemVersion": 1,
+        "id": "1ef9bda5-e67f-11ea-a057-fdaac99f1420",
+        "firstName": "John",
+        "lastName": "Zoidberg",
+        "middleName": "A.",
+        "practices": [
+          {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1420",
+            "issuerKind": "practiceLicense",
+            "issuerAlias": "CA_QC_CMQ",
+            "issuer": "CMQ",
+            "number": "112499",
+            "version": "2",
+            "expiresOn": "2021-01-28",
+            "isActive": false
+          }
+        ]
+      },
+      {
+        "feedAlias": "fiktivDP",
+        "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1421",
+        "lastUpdated": "2021-01-14T23:41:21.050Z",
+        "feedItemVersion": 1,
+        "id": "1ef9bda5-e67f-11ea-a057-fdaac99f1421",
+        "firstName": "Douglas",
+        "lastName": "Evil",
+        "middleName": "",
+        "practices": [
+          {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1421",
+            "issuerKind": "practiceLicense",
+            "issuerAlias": "CA_QC_CMQ",
+            "issuer": "CMQ",
+            "number": "112488",
+            "version": "2",
+            "expiresOn": "2021-01-28",
+            "isActive": false
+          }
+        ]
+      },
+      {
+        "feedAlias": "fiktivDP",
+        "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1422",
+        "lastUpdated": "2021-01-14T23:41:21.050Z",
+        "feedItemVersion": 1,
+        "id": "1ef9bda5-e67f-11ea-a057-fdaac99f1422",
+        "firstName": "Michaela",
+        "lastName": "Quinn",
+        "middleName": "Anne",
+        "practices": [
+          {
+            "feedItemId": "1ef9bda5-e67f-11ea-a057-fdaac99f1422",
+            "issuerKind": "practiceLicense",
+            "issuerAlias": "CA_QC_CMQ",
+            "issuer": "CMQ",
+            "number": "112477",
+            "version": "2",
+            "expiresOn": "2021-01-28",
+            "isActive": true
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "requestStatus": {
+    "status": "OK",
+    "message": "Returning Private Message [1ef9bda0-e67f-11ea-a057-fdaac99f1414] Content from Dispensary [fiktivDP]."
+  },
+  "responseContent": {
+    "messageContext": "\"Telemedicine note\", or \"Lab result annotation\"",
+    "subject": "Results of exam 73",
+    "text": "There is no attachment in this PM",
+    "attachments": []
+  }
+}
