@@ -47,7 +47,7 @@ This projects uses the [Portable EHR Java Feed SDK](https://github.com/Portable-
 <dependency>
     <groupId>org.portableehr</groupId>
     <artifactId>portableehr-feed-sdk</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
