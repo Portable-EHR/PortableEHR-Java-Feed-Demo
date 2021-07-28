@@ -268,7 +268,7 @@ public class FeedApiController implements FeedApi {
                             appointment.setFeedItemId(appId);
                             appointment.setLastUpdated(new Date());
                             appointment.setStartTime(startDate.getTime());
-                            appointment.setEndTime(startDate.getTime());
+                            appointment.setEndTime(endDate.getTime());
                         }
                         break;
                 }
