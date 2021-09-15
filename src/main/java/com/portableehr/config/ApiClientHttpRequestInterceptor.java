@@ -43,15 +43,15 @@ public class ApiClientHttpRequestInterceptor implements ClientHttpRequestInterce
 
     private void logRequest(HttpRequest request, byte[] body) {
         log.info("client >> URI: " + request.getURI());
-        log.info("client >> HTTP Method: " + request.getMethod());
-        log.info("client >> HTTP Headers: " + headersToString(request.getHeaders()));
+        if(log.isDebugEnabled())log.debug("client >> HTTP Method: " + request.getMethod());
+        if(log.isDebugEnabled())log.debug("client >> HTTP Headers: " + headersToString(request.getHeaders()));
         log.info("client >> Request Body: " + System.lineSeparator() + new String(body, StandardCharsets.UTF_8));
     }
 
     private void logResponse(ClientHttpResponse response) throws IOException {
         log.info("client << HTTP Status Code: " + response.getRawStatusCode());
-        log.info("client << Status Text: " + response.getStatusText());
-        log.info("client << HTTP Headers: " + headersToString(response.getHeaders()));
+        if(log.isDebugEnabled())log.debug("client << Status Text: " + response.getStatusText());
+        if(log.isDebugEnabled())log.debug("client << HTTP Headers: " + headersToString(response.getHeaders()));
         log.info("client << Response Body: " + System.lineSeparator() + bodyToString(response.getBody()));
     }
 

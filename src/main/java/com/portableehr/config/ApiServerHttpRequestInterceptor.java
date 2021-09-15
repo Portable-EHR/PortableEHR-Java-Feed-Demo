@@ -33,14 +33,14 @@ public class ApiServerHttpRequestInterceptor implements HandlerInterceptor {
 
     private void logRequest(HttpServletRequest request) throws IOException {
         log.info("server << URI: " + request.getRequestURI());
-        log.info("server << HTTP Method: " + request.getMethod());
-        log.info("server << HTTP Headers: " + headersToString(request));
+        if(log.isDebugEnabled())log.debug("server << HTTP Method: " + request.getMethod());
+        if(log.isDebugEnabled())log.debug("server << HTTP Headers: " + headersToString(request));
     }
 
     private void logResponse(HttpServletResponse response) throws IOException {
         log.info("server >> HTTP Status Code: " + response.getStatus());
-        log.info("server >> Status Text: " + HttpStatus.valueOf(response.getStatus()));
-        log.info("server >> HTTP Headers: " + headersToString(response));
+        if(log.isDebugEnabled())log.debug("server >> Status Text: " + HttpStatus.valueOf(response.getStatus()));
+        if(log.isDebugEnabled())log.debug("server >> HTTP Headers: " + headersToString(response));
     }
 
     private String headersToString(HttpServletRequest request) {
