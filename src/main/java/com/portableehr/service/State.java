@@ -41,7 +41,7 @@ public class State {
     private List<String> serverAppointmentDispositionsOptions = new ArrayList();
     private StringBuilder serverLogs = new StringBuilder();
     private int logEntryCount = 0;
-    private int MAX_LOG_ENTRIES = 10;
+    private int MAX_LOG_ENTRIES = 50;
 
     // Client
     private String clientJWTAuthToken;
