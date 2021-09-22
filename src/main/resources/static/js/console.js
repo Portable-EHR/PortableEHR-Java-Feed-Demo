@@ -32,12 +32,10 @@ $(document).ready( function(){
             url: "/server/logs",
         });
         request.done(function (msg) {
-            for (let i = 0; i < msg.length; i++) {
-                $('.serverLog tbody').prepend('<tr><td>'+msg[i].timestamp+'</td><td>'+msg[i].method+'</td><td>'+msg[i].endpoint+'</td><td>'+msg[i].option+'</td></tr>');
-            }
+            $('.serverLog').html(msg);
         });
-        request.fail(function () {
-            console.error("Cannot pull servers log")
+        request.fail(function (jqXHR, textStatus, errorThrown) {
+            console.error("Cannot pull servers log : ", jqXHR, textStatus, errorThrown)
         });
     }, 3000);
 

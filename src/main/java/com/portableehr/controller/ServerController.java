@@ -97,17 +97,10 @@ public class ServerController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-
-    @GetMapping(value = "/server/logs", produces = { "application/json" })
-    public ResponseEntity<List<ServerLogEntry>> getServerLogs(){
+    @GetMapping(value = "/server/logs", produces = { "text/plain" })
+    public ResponseEntity<String> getServerLogs(){
         try {
-            List<ServerLogEntry> response = null;
-            synchronized (appState.getServerLogs()){
-                response = appState.getServerLogs().stream().collect(Collectors.toList());
-                appState.getServerLogs().clear();
-            }
-
-            return new ResponseEntity(response, HttpStatus.OK);
+            return new ResponseEntity(appState.getServerLogs(), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
             return new ResponseEntity(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);

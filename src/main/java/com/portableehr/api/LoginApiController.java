@@ -55,7 +55,7 @@ public class LoginApiController implements LoginApi {
             String content = fileUtils.getOptionContent(ServerMockService.SERVER_LOGIN_POST_ROOT, appState.getServerLoginSelected());
             LoginResponse response = objectMapper.readValue(content, LoginResponse.class);
 
-            appState.getServerLogs().add(new ServerLogEntry("POST", "/login", appState.getServerLoginSelected()));
+            appState.addLogEntry(new ServerLogEntry("POST", "/login", appState.getServerLoginSelected()));
             log.info(">>> /login responded : " + objectMapper.writeValueAsString(response));
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (IOException e) {

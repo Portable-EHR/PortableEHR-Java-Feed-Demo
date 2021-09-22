@@ -115,7 +115,7 @@ public class FeedApiController implements FeedApi {
                         break;
                 }
 
-                appState.getServerLogs().add(new ServerLogEntry("POST", "/feed/patient" + patientPullRequest.getCommand(), option));
+                appState.addLogEntry(new ServerLogEntry("POST", "/feed/patient " + patientPullRequest.getCommand(), option));
                 log.info("server >> Response Body: : " + objectMapper.writeValueAsString(response));
                 return new ResponseEntity<>(response, HttpStatus.OK);
             } catch (IOException e) {
@@ -136,7 +136,7 @@ public class FeedApiController implements FeedApi {
                 String content = fileUtils.getOptionContent(ServerMockService.SERVER_PATIENT_POST_ROOT, appState.getServerPatientSingleSelected());
                 FeedApiResponse response = objectMapper.readValue(content, FeedApiResponse.class);
 
-                appState.getServerLogs().add(new ServerLogEntry("POST", "/feed/patient/reachability", appState.getServerPatientSingleSelected()));
+                appState.addLogEntry(new ServerLogEntry("POST", "/feed/patient/reachability", appState.getServerPatientSingleSelected()));
                 log.info("server >> Response Body: : " + objectMapper.writeValueAsString(response));
                 return new ResponseEntity<>(response, HttpStatus.OK);
             } catch (IOException e) {
@@ -176,7 +176,7 @@ public class FeedApiController implements FeedApi {
                         break;
                 }
 
-                appState.getServerLogs().add(new ServerLogEntry("POST", "/feed/practitioner" + practitionerPullRequest.getCommand(), option));
+                appState.addLogEntry(new ServerLogEntry("POST", "/feed/practitioner " + practitionerPullRequest.getCommand(), option));
                 log.info("server >> Response Body: : " + objectMapper.writeValueAsString(response));
                 return new ResponseEntity<>(response, HttpStatus.OK);
             } catch (IOException e) {
@@ -197,7 +197,7 @@ public class FeedApiController implements FeedApi {
                 String content = fileUtils.getOptionContent(ServerMockService.SERVER_PRIVATEMESSAGE_CONTENT_POST_ROOT, appState.getServerPrivateMessageContentSelected());
                 PrivateMessageContentResponse response = objectMapper.readValue(content, PrivateMessageContentResponse.class);
 
-                appState.getServerLogs().add(new ServerLogEntry("POST", "/feed/privateMessage/content", appState.getServerPrivateMessageContentSelected()));
+                appState.addLogEntry(new ServerLogEntry("POST", "/feed/privateMessage/content", appState.getServerPrivateMessageContentSelected()));
                 log.info("server >> Response Body: : " + objectMapper.writeValueAsString(response));
                 return new ResponseEntity<>(response, HttpStatus.OK);
             } catch (IOException e) {
@@ -218,7 +218,7 @@ public class FeedApiController implements FeedApi {
                 String content = fileUtils.getOptionContent(ServerMockService.SERVER_PRIVATEMESSAGE_STATUS_POST_ROOT, appState.getServerPrivateMessageStatusSelected());
                 PrivateMessageStatusResponse response = objectMapper.readValue(content, PrivateMessageStatusResponse.class);
 
-                appState.getServerLogs().add(new ServerLogEntry("POST", "/feed/privateMessage/status", appState.getServerPrivateMessageStatusSelected()));
+                appState.addLogEntry(new ServerLogEntry("POST", "/feed/privateMessage/status", appState.getServerPrivateMessageStatusSelected()));
                 log.info("server >> Response Body: : " + objectMapper.writeValueAsString(response));
                 return new ResponseEntity<>(response, HttpStatus.OK);
             } catch (IOException e) {
@@ -273,7 +273,7 @@ public class FeedApiController implements FeedApi {
                         break;
                 }
 
-                appState.getServerLogs().add(new ServerLogEntry("POST", "/feed/appointment " +appointmentPullRequest.getCommand(), option));
+                appState.addLogEntry(new ServerLogEntry("POST", "/feed/appointment " +appointmentPullRequest.getCommand(), option));
                 log.info("server >> Response Body: : " + objectMapper.writeValueAsString(response));
                 return new ResponseEntity<>(response, HttpStatus.OK);
             } catch (IOException e) {
@@ -295,7 +295,7 @@ public class FeedApiController implements FeedApi {
                 String content = fileUtils.getOptionContent(ServerMockService.SERVER_APPOINTMENT_DISPOSITION_POST_ROOT, appState.getServerAppointmentDispositionSelected());
                 AppointmentDispositionResponse response = objectMapper.readValue(content, AppointmentDispositionResponse.class);
 
-                appState.getServerLogs().add(new ServerLogEntry("POST", "/feed/appointment/disposition", appState.getServerAppointmentDispositionSelected()));
+                appState.addLogEntry(new ServerLogEntry("POST", "/feed/appointment/disposition", appState.getServerAppointmentDispositionSelected()));
                 log.info("server >> Response Body: : " + objectMapper.writeValueAsString(response));
                 return new ResponseEntity<>(response, HttpStatus.OK);
             } catch (IOException e) {

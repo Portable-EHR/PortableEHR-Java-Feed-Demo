@@ -9,8 +9,11 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.swing.text.DateFormatter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Formatter;
 import java.util.List;
 
 @Component
@@ -36,7 +39,9 @@ public class State {
     private List<String> serverAppointmentOptions = new ArrayList();
     private String serverAppointmentDispositionSelected;
     private List<String> serverAppointmentDispositionsOptions = new ArrayList();
-    private List<ServerLogEntry> serverLogs = Collections.synchronizedList(new ArrayList<>());
+    private StringBuilder serverLogs = new StringBuilder();
+    private int logEntryCount = 0;
+    private int MAX_LOG_ENTRIES = 10;
 
     // Client
     private String clientJWTAuthToken;
@@ -198,12 +203,23 @@ public class State {
         this.serverAppointmentDispositionsOptions = serverAppointmentDispositionsOptions;
     }
 
-    public List<ServerLogEntry> getServerLogs() {
-        return serverLogs;
+    public String getServerLogs() {
+        return serverLogs.toString();
     }
 
-    public void setServerLogs(List<ServerLogEntry> serverLogs) {
-        this.serverLogs = serverLogs;
+    public synchronized void addLogEntry(ServerLogEntry logEntry) {
+        this.serverLogs.insert(0, String.format("[%-23s] %-4s %-40s -> %s%s",
+                new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS").format(logEntry.getTimestamp()),
+                logEntry.getMethod(),
+                logEntry.getEndpoint(),
+                logEntry.getOption(),
+                System.lineSeparator()));
+
+        if(logEntryCount < MAX_LOG_ENTRIES) logEntryCount++;
+        if(logEntryCount >= MAX_LOG_ENTRIES) {
+            this.serverLogs.delete(serverLogs.length()-System.lineSeparator().length(), serverLogs.length());
+            this.serverLogs.delete(serverLogs.lastIndexOf(System.lineSeparator())+System.lineSeparator().length(), serverLogs.length());
+        }
     }
 
     // Client
