@@ -34,3 +34,5 @@ build/
 
 *.log
 feed.pid
+
+.DS_Store
