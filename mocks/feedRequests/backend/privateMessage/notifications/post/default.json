@@ -2,8 +2,8 @@
   "feedAlias": "fiktivDP",
   "command": "pushSingle",
   "parameters": {
-    "messageId": "1ef9bda0-e67f-11ea-a057-fdaac99f1111",
-    "patientId": "1ef9bda5-e67f-11ea-a057-fdaac99f1411",
+    "messageId": "2cf89567-48e1-4f33-89d3-95f9ee0c3cae",
+    "patientId": "884490ac-f648-47ce-9f6e-16fcf4fd7f3a",
     "dateCreated": "2021-03-03T14:51:43.622Z",
     "physicianId": "1ef9bda5-e67f-11ea-a057-fdaac99f1420"
   }
